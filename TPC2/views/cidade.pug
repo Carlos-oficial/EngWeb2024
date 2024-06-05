@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h1 #{cidade.nome}-#{cidade.distrito}
+
+    p #{cidade.descrição}
+    p População: #{cidade.população}
+    h2 From
+    div
+        each l in ligacoesFrom
+            a(href=l.id)
+                p=l.nome
+
+    h2 To
+    div
+        each l in ligacoesTo
+            a(href=l.id)
+                p=l.nome
